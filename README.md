@@ -45,12 +45,14 @@ To run the script, use the following command:
 
 ```sh
 python main.py
+```
 
 
 
-Data Format
+# Data Format
 The data.txt file contains the user data in the following format:
 
+```sh
 First Name: [first_name]
 Last Name: [last_name]
 Email: [email]
@@ -65,11 +67,12 @@ Phone: [phone]
 Gender: [gender]
 Date Of Birth: [date_of_birth]
 
-...
+```
 
 
-Example
+# Example
 
+```sh
 First Name: Brennan
 Last Name: Fitzpatrick
 Email: brennanfitzpatrick@zentia.com
@@ -83,26 +86,31 @@ Email: currywoods@zentia.com
 Phone: +1 (991) 412-2301
 Gender: male
 Date Of Birth: Mar 30, 1991
+```
 
-
-Main Script
+# Main Script
 The main.py script performs the following tasks:
 
-Login: Logs into the website using the provided credentials.
-Data Reading: Reads and parses user data from data.txt.
-Form Filling: Fills out the form on the website with the parsed data and submits it.
+1. Login: Logs into the website using the provided credentials.
+2. Data Reading: Reads and parses user data from data.txt.
+3. Form Filling: Fills out the form on the website with the parsed data and submits it.
 
-Key Functions
-read_data(file_path): Reads and parses data from the specified text file.
-convert_gender(gender): Converts the gender string to camel case.
-fill_form(record): Fills out and submits the form with the given record.
+# Key Functions
+1. read_data(file_path): Reads and parses data from the specified text file.
+2. convert_gender(gender): Converts the gender string to camel case.
+3. fill_form(record): Fills out and submits the form with the given record.
 
-Example Usage
+-- Example Usage
+
 
 # Read the data from the text file
+
+```sh
 parsed_data = read_data("data.txt")
+```
 
 # Fill the form for each record
+```sh
 for record in parsed_data:
     fill_form(record)
     sleep(2)  # Add sleep to simulate realistic form submission delay
@@ -112,6 +120,7 @@ try:
         pass
 except KeyboardInterrupt:
     driver.quit()
+```
 
-License
+# License
 This project is licensed under the MIT License. See the LICENSE file for details.
